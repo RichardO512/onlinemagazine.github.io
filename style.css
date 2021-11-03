@@ -110,7 +110,7 @@ header{
     color: #333;
 }
 
-@media (max-width: 790px){
+@media (max-width: 600px){
     .wrapper{
         width: 100%;
     }
@@ -337,3 +337,14 @@ footer{
     padding: 13px 10px;
     cursor: pointer;
 }
+
+@media (max-width:600px) {
+	img {
+		width: 100%;
+	}
+    .header1{
+        display: flex;
+        justify-content: center;
+    }
+
+	}
