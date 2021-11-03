@@ -1,0 +1,46 @@
+
+body{
+    background-color: aliceblue;
+}
+.about-wrapper, .aboutnav-area, li{
+    list-style-type: none;
+    float: right;
+  
+  }
+  .aboutnav-area, li a{
+    display: block;
+    padding: 8px;
+    background-color: aliceblue;
+  }
+  
+  @media screen and (max-width: 768px) {
+    /* and use max width of 768 for tablet screen */
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+        header, main, article{
+            display: flex;
+            /* justify-content: center; */
+        }
+
+        article img{
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+        }
+        main > article > .artistInformation > div .ArtistText{
+            text-align: center;
+            color: lightslategrey;
+        }
+        main > article >  div .ArtistText{
+           
+            margin-left: 40px;
+        }
+        main > article > img a:hover{
+            cursor: pointer;
+            opacity: 10px;
+        }
+        

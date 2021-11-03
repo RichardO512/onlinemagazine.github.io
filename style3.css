@@ -1,0 +1,48 @@
+/* 
+gallery style
+ */
+body{
+    padding-top:50px;
+    padding-bottom:50px;
+    background:gray;
+}
+img{
+    margin-top:25px;
+    box-shadow:5px 5px 5px #aaaaaa;
+}
+.container{
+    background:#f1f1f1;
+    padding-bottom:20px;
+}
+.nav-area{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+.nav-area li{
+    display: inline-block;
+}
+.nav-area li a{
+    color:#fff;
+    text-decoration:none;
+    padding: 5px 20px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.nav-area li a:hover{
+    /* hover on link */
+    background: #fff;
+    color: #333;
+}
+.nav-area{
+        float: none;
+        margin-top: 0;
+    }
+.nav-area li a{
+        padding: 5px;
+        font-size: 11px;
+    }
+.nav-area{
+        text-align: center;
+    }

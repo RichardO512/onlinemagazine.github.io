@@ -1,0 +1,339 @@
+/* 
+arts 1 and 2
+ */
+main{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-gap: 20px;
+    align-items: stretch;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+}
+main > article{
+    border: 1px solid black;
+    box-shadow: 2px 2px 6px 0px rgba(0,0,255,.3);
+}
+main > article img{
+    max-width: 100%;
+}
+.text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+}
+button{
+    background-color: lightpink;
+    padding: 5px;
+    color:grey;
+}
+/* 
+index
+ */
+ *{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.wrapper{
+    width: 1170px;
+    margin: auto;
+}
+header{
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+    url("Image/artpic3.jpg");
+    height: 100vh;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+.nav-area{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+.nav-area li{
+    display: inline-block;
+}
+.nav-area li a{
+    color:#fff;
+    text-decoration:none;
+    padding: 5px 20px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.nav-area li a:hover{
+    /* hover on link */
+    background: #fff;
+    color: #333;
+}
+.logo{
+    /* to float or put the logo on left side */
+    float:left;
+}
+.logo img{
+    /* make the img width to 100%
+    and padding top is 15px */
+    width: 100%;
+    padding: 15px 0;
+}
+.welcome-text{
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    margin: 20% 30%;
+    text-align: center;
+}
+.welcome-text h1{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+.welcome-text h1 span{
+    color: #00fecb;
+}
+.welcome-text a{
+    border: 1px solid #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 20px;
+    display:inline-block;
+    color: #fff;
+}
+.welcome-text a:hover{
+    background: #fff;
+    color: #333;
+}
+
+@media (max-width: 790px){
+    .wrapper{
+        width: 100%;
+    }
+    .logo{
+        float: none;
+        width: 50%;
+        text-align: center;
+        margin:auto;
+    }
+    /* img{ 
+     width:auto; 
+        } */
+    .nav-area{
+        float: none;
+        margin-top: 0;
+    }
+    .nav-area li a{
+        padding: 5px;
+        font-size: 11px;
+    }
+    .nav-area{
+        text-align: center;
+    }
+    .welcome-text{
+        width: 100%;
+        height: auto;
+        margin: 30% 0;
+    }
+    .welcome-text h1{
+        font-size: 30px;
+    }
+}
+/* gallery */
+*{
+    margin:0;
+    padding:0;
+}
+
+.wrapper{
+    width: 1170px;
+    margin: auto;
+}
+header{
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+    url("Image/bgimage.jpg");
+    height: 100vh;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+.nav-area{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+.nav-area li{
+    display: inline-block;
+}
+.nav-area li a{
+    color:#fff;
+    text-decoration:none;
+    padding: 5px 20px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.nav-area li a:hover{
+    /* hover on link */
+    background: #fff;
+    color: #333;
+}
+header> div > .wrapper footer{
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+footer > .centerImage, .galleryImage, .galleryImage1, .galleryImage2{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "footer footer footer";   
+}
+header{
+    grid:header;
+}
+footer{
+    grid:footer;
+}
+footer{
+    background-color: antiquewhite;
+}
+.galleryImage{
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content:center;
+}
+.galleryImage img{
+    width: 50%;
+    height: auto;
+    border-radius: 100%;
+    opacity: 1;
+    display: inline-block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.middle{
+    transition: .5 ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.galleryImage:hover img{
+    opacity: 0.3;
+}
+.galleryImage:hover .middle{
+    opacity: 1;
+}
+
+.textGallery{
+    background-color: #04AA6D;
+    font-size: 16px;
+    padding: 13px 10px;
+    cursor: pointer;
+}
+.galleryImage1{
+    position: relative;
+    display: flex;
+    width: 50%;
+    display: flex;
+    justify-content:center;
+    /* align-items:flex-start; */
+}
+.galleryImage1 img{
+    width: 30%;
+    height: auto;
+    border-radius: 100%;
+    opacity: 1;
+    display: inline-block;
+    display: flex;
+    justify-content:center ;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    /* margin-left: 70%; */
+    margin: 10% 50% 0 60%;
+    /* margin-bottom: 80%; */
+}
+.middle1{
+    transition: .5 ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.galleryImage1:hover img{
+    opacity: 0.3;
+}
+.galleryImage1:hover .middle1{
+    opacity: 1;
+}
+
+.text1{
+    background-color: #04AA6D;
+    font-size: 16px;
+    padding: 13px 10px;
+    cursor: pointer;
+}
+.wrapperArt1{
+    width: 1170px;
+    margin: auto;
+}
+.header1{
+    /* background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), */
+    /* url("Image/artpic3.jpg"); */
+    height: 10vh;
+    /* -webkit-background-size: cover; */
+    /* background-size: cover; */
+    /* background-position: center center; */
+    position: relative;
+}
+.galleryImage2 img{
+    width: 20em;
+    height: 20em;
+    border-radius: 100%;
+    float: right;
+    opacity: 1;
+    /* display: inline-block; */
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.middle2{
+    transition: .5 ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    margin-left: 25%;
+    align-items: flex-start;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.galleryImage2:hover img{
+    opacity: 0.3;
+}
+.galleryImage2:hover .middle{
+    opacity: 1;
+}
+
+.textGallery2{
+    background-color: #04AA6D;
+    font-size: 16px;
+    padding: 13px 10px;
+    cursor: pointer;
+}

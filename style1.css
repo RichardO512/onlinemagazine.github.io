@@ -1,0 +1,98 @@
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    /* i use box-sizing
+    property to control the box model */
+   box-sizing: border-box;
+     
+  }
+  
+  *{
+    /* and i use the universal 
+    so all the contents or tags with different
+    width use or inherit the border-box  */
+    box-sizing:inherit;
+    /* and i use the inherent
+    to inherit the parent element which is the body
+    or border-box */
+  }
+  
+  .column {
+    /* and here in column class
+    i use float element to make all the
+    contents inside the column class
+    will be display  left */
+    float: left;
+    width: 33.3%;
+    /* i use 33.3% to make all content width to 33% */
+    margin-bottom: 16px;
+    padding:8px;
+    /* and i use padding to make 8px padding */
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* i use box-shadow to give a illusion
+    that the contents are floating */
+    margin: 2px;
+  }
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: lightslategrey;
+    color: white;
+    /* make the text in center with a
+    padding of 50px and a background color of lightgray
+    and a white text */
+  }
+  
+  .container {
+    padding:16px;
+  }
+  
+  .container::after, .row::after {
+    /* content: ""; */
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    display: inline-block;
+    /* i use the inline-block to display
+    the item or the button horizontally */
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    /* to make the curso point */
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+    /* to hover */
+  }
+  .about-wrapper, .aboutnav-area, li{
+    list-style-type: none;
+    float: right;
+  
+  }
+  .aboutnav-area, li a{
+    display: block;
+    padding: 8px;
+    background-color: lightslategray;
+  }
+  
+  @media screen and (max-width: 768px) {
+    /* and use max width of 768 for tablet screen */
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
